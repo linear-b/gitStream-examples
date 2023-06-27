@@ -5,6 +5,7 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
+
 const performCalculation = (num1, operator, num2) => {
     num1 = parseFloat(num1);
     num2 = parseFloat(num2);
