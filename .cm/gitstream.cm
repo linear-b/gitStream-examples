@@ -1,7 +1,7 @@
 automations:
   estimated_time_to_review:
     if:
-      - {{ true | nope }}
+      - {{ pr.labels | match(term='etr') }}
     run:
       - action: add-label@v1
         args:
