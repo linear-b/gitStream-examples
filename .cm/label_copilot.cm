@@ -6,7 +6,7 @@ automations:
   label_copilot:
     # Detect PRs that contain the text '#copilot#' in the title, description, comments, or commit messages
     if:
-      - {{ files | match(regex=r/Standard\/assign-code-experts\//) | every }}
+      - {{ files | match(regex=r/Integrations\copilot\//) | every }}
       - {{ copilot_tag.pr_title or copilot_tag.pr_desc or copilot_tag.pr_comments or copilot_tag.commit_messages  }}
     # Apply a label indicating the user has adopted Copilot
     run:
